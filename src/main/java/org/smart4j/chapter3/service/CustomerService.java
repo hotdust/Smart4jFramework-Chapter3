@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Map;
 import org.smart4j.chapter3.helper.DatabaseHelper;
 import org.smart4j.chapter3.model.Customer;
+import org.smart4j.framework.annotation.Service;
 
 /**
  * 提供客户数据服务
  */
+@Service
 public class CustomerService {
 
     /**
