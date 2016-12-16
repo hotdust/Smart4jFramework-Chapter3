@@ -87,4 +87,23 @@ public class CustomerController {
         boolean result = customerService.deleteCustomer(id);
         return new Data(result);
     }
+
+
+    /**
+     * 测试正常事务
+     */
+    @Action("get:/transaction_nomral")
+    public void testTransaction_normal(Param param) {
+        customerService.testTransaction_normal();
+    }
+
+
+    /**
+     * 测试异常事务
+     */
+    @Action("get:/transaction_ng")
+    public void testTransaction_ng(Param param) {
+        customerService.testTransaction_exceptionBetweenLogic();
+    }
+
 }
