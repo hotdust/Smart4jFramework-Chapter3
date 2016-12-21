@@ -8,6 +8,7 @@ import org.smart4j.chapter3.model.Customer;
 import org.smart4j.framework.annotation.Service;
 import org.smart4j.framework.annotation.Transaction;
 import org.smart4j.framework.helper.DatabaseHelper;
+import org.smart4j.framework.helper.ServletHelper;
 
 /**
  * 提供客户数据服务
@@ -21,6 +22,10 @@ public class CustomerService {
     public List<Customer> getCustomerList() {
         String sql = "SELECT * FROM customer";
         List<Customer> customerList = DatabaseHelper.queryEntityList(Customer.class, sql);
+
+        // test set attribute
+        ServletHelper.setRequestAttribute("greeting", "hello");
+
         return customerList;
 //        return new ArrayList<Customer>();
     }

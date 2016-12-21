@@ -9,7 +9,8 @@
 </head>
 <body>
 
-<h1>客户列表111</h1>
+<h1>客户列表${greeting}</h1>
+<%--<h1><c:out value="${greeting}"</h1>--%>
 
 <table>
     <tr>
@@ -19,6 +20,8 @@
         <th>邮箱地址</th>
         <th>操作</th>
     </tr>
+    
+    
 
     <c:forEach var="customer" items="${customerList}">
         <tr>
