@@ -10,6 +10,7 @@ import org.smart4j.framework.annotation.Inject;
 import org.smart4j.framework.bean.Data;
 import org.smart4j.framework.bean.Param;
 import org.smart4j.framework.bean.View;
+import org.smart4j.plugin.security.annotation.HasRoles;
 
 /**
  * 处理客户管理相关请求
@@ -60,6 +61,7 @@ public class CustomerController {
     /**
      * 进入 编辑客户 界面
      */
+    @HasRoles("admin")
     @Action("get:/customer_edit")
     public View edit(Param param) {
         long id = param.getLong("id");

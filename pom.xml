@@ -10,6 +10,7 @@
     <packaging>war</packaging>
 
 
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -23,10 +24,11 @@
 
         <!--shiro lib-->
         <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-web</artifactId>
-            <version>1.2.2</version>
+            <groupId>org.smart4j</groupId>
+            <artifactId>smart-plugin-security</artifactId>
+            <version>1.0.0</version>
         </dependency>
+
 
         <!--<dependency>-->
             <!--<groupId>org.slf4j</groupId>-->
@@ -51,6 +53,14 @@
                 <version>2.2</version>
                 <configuration>
                     <path>/${project.artifactId}</path>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>

@@ -1,6 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="security" uri="/security" %>
+<%--<%@ taglib prefix="shiro" uri="http://shiro.apache.org/tags" %>--%>
 
 <c:set var="BASE" value="${pageContext.request.contextPath}"/>
 
@@ -12,7 +12,7 @@
 
 <h1>登录</h1>
 
-<security:guest>
+<shiro:guest>
     <form action="${BASE}/login" method="post">
         <table>
             <tr>
@@ -30,11 +30,13 @@
             </tr>
         </table>
     </form>
-</security:guest>
+</shiro:guest>
 
-<security:user>
-    <c:redirect url="/"/>
-</security:user>
+<shiro:user>
+    shir:user
+    <c:redirect url="${BASE}/customer_edit?id=2"/>
+
+</shiro:user>
 
 </body>
 </html>
